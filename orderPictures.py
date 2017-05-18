@@ -54,9 +54,12 @@ def orderPicture(filename):
     # move picture to correct location
     os.rename(filename, neededDirPath + "/" + filename)
 
+# define file-endings to look for
+fileendings = ('.jpg', '.jpeg')
+
 # actually iterate over all files in current directory and order them
 files = [f for f in os.listdir('.') if os.path.isfile(f)]
 for f in files:
     print(f)
-    if (f.endswith('.jpg') | f.endswith('.JPG') | f.endswith('.jpeg') | f.endswith('.JPEG')):
+    if (f.lower().endswith(fileendings)):
         orderPicture(f)
