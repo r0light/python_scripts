@@ -8,3 +8,7 @@ requires pillow:
 ```
 pip install pillow
 ```
+
+## relationDetection.py
+
+A script to analyze sequences of numbers to search for defining patterns (sequences as they are used in tests)
