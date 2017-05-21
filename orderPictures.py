@@ -52,7 +52,7 @@ def orderPicture(filename):
     # create path if necessary
     createDirsIfNeeded(neededDirPath)
     # move picture to correct location
-    os.rename(filename, neededDirPath + "/" + filename)
+    os.replace(filename, neededDirPath + "/" + filename)
 
 # define file-endings to look for
 fileendings = ('.jpg', '.jpeg')
